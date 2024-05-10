@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+
+
+<!-- dom maunipilation  -->
+<!-- document.getElementById('firstHeading'
+
+document.getElementById('firstHeading').innerHTML ="<h1> Learn with Shadab</h1>"
+from .innerHTML we can change the inner content  -->
+
+
+
+
+
+
+// document.getElementsByClassName("heading").innerHTML = "Introduction of DOM using JavaScript."
+
+
+
+// That's how we can select the Element using its 'id'
+
+1 HERE  DOCUMENT IS USE TO SELECT THE WHOLE DOCUMENT  
+2 .getElementByID ("id name / class name") is method and we have more method also 
+ 
+
+// document.getElementById("Title").innerHTML = "Learn DOM with Shadab"
+ 
+after that we have .innerHTML IT IS USE TO REPLAC THE inner context with 
+(lear with shadab) 
+// document.getElementById("Title").id
+this line give you the id which is title  
+
+
+// document.getElementById("Title").getAttribute('id')
+.getAttribute se hum sare attribute pata lga sak ta hai ye bhi ek methode hai 
+// document.getElementById("Title").getAttribute('class')
+// document.getElementById("Title").getAttribute('class')
+// document.getElementById("Title").setAttribute('class','test')
+.steattribute se hum kise bhi attribute ko replace kr sak ta hai old arrtibute remove ho jayegi 
+
+// document.getElementById("Title").setAttribute('class','test heading')  
+
+
+--------------   store it in a variable //
+
+
+const title = document.getElementById('title')
+        undefined
+        
+        title
+        <h1 id=​"title" class=​"heading">​"DOM Learning on Chai aur Code "<span>​Test text​</span>​</h1>​
+        
+        title.style.backgroundColor = "green"
+        'green'
+        title el variable hai jis mai document store hai or hum 
+        tho hm bas title. se kise ko bhi acces kr sak ta hai just like 
+        title.style.backgroundcolor ="geen , blue , red  ,ect " -- dena ek he color hai ok 
+
+        title.style.padding = "20px"
+        '20px'
+
+        same aase he padding de do 
+        
+        title.style.borderRadius = "20px"
+        '20px'
+        or same aase he borderRadius de do 
+
+
+        ------------------xxxxxxxxxxxxxxxxxx--------------
+         hume ye dek liye ki values kase nikal ta hai ( class or id )
+         
+         AB hum dekhenga ki hum content kase nikal ta hai 
+
+
+         title.textcontent
+         "DOM learning on Chai aur code"
+
+         ------  tho   .textcontent se humara content aajayega or hm conten nikla payenge 
+
+         title.innerHTML 
+          YE BHI SAME HE VALUE DE THA HAI SAME AS .TEXTCONTENT 
+
+
+          OR EK OR HAI 
+          Title.inertext 
+          ye nhi same deta hai value same as innerHTML ,textcontent 
+
+
+
+         --------------- THEK HAI JI ----------------
+
+         AB BAT YE AATI HAI  jab thino ek he kam kr ta hai tho banaye he kyu 
+
+         but ye same nhi hai ab bat kr ta hi ki differnet kya hai in thino mai 
+
+
+
+         ----------- chalo dek hai deffrence kya hai  -------------
+
+
+         innertext -  (tho is mai sirf vo text aata hai outopt mai jo visible hota hai 
+         jo nhi hota jo hum css ki help se hide kr deta hai )
+
+         textcontent - (is mai sara text visible hota hai jon screen pr visible bhi nhi hita vo bhi )
+
+
+         ineerHTML - (is mai huma sara html visible hota )
