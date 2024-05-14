@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Dom | chai with code </title>
+</head>
+<body style="background-color:bisque">
+    <div class="parents">
+
+    <div class="day">monday</div>
+
+    <div class="day">tuesday</div>
+
+    <div class="day">wedenesday</div>
+
+    
+
+    <div class="day">thursday</div> 
+
+      </div>
+</body>
+<script>
+    const parent= document.querySelector('.parents') 
+    console.log(parent)
+    console.log(parent.childeren)
+
+  // ye parent.children ek HTMLcollection deta hai jo ki array ki tara hota hai or yr bata tha hai ki kitne chiladren hai ya fir kitne classe hai us parent ka ander  -->
+ // aur aagra huma parent ka childeren ka content chayehe tho use karo .innerHTML -->
+
+console.log(parent.children[2].innerHTML)
+
+
+ //hum is mai loop bhi lha sak ta hai parent mai nhi pr parent.children mai kyo ki ye huma htmlcollection deta hai jo ki almost arraynhe hota ahai  -->
+
+
+    for(let i=0;i< parent.children.length ; i++){
+        console.log(parent.children[i].innerHTML)
+    }
+
+
+
+
+    parent.children[1].style.color = "orange"
+    console.log(parent.firstElementChild);
+//is se hum first child element ko accese kr sak ta hai 
+
+    console.log(parent.lastElementChild);
+    //same as last element of parent
+
+    const dayOne = document.querySelector('.day')
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement);
+    // console.log(dayOne.nextElementSibling);
+
+    console.log("NODES: ", parent.childNodes);
+
+
+</script>
+</html>
