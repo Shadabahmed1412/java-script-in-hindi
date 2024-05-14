@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    //ham ne ek div banaya .creatElement ('div')ye hame div creat kr ka de dega div ki jhaga hum h1 bhi kr sak ta hai 
+
+    const div = document.createElement('div')
+    console.log(div);
+    //ab ham is div ka ander ADD    kr sak ta ha class ko add karenge clasname se,id 
+
+    div.className = "main"
+    //main jo hai class ka namm diya hai
+    div.id = Math.round(Math.random() * 10 + 1)
+
+    div.setAttribute("title", "generated title")
+    //setAttribute se ham attribute ko set kr sak ta hai 
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    // div.innerText = "Chai aur code"
+
+    const addText = document.createTextNode("Chai aur code")
+    //ab kuch text ko add krna hai tho creattextnode ("jo bhi disple pr show kara na hai vo likho")
+    div.appendChild(addText)
+    //.appendchild se div mai add ho jayega jo bhi child   hai
+
+    document.body.appendChild(div)
+    //or fir use div mai add krdo 
+</script>
+</html>
