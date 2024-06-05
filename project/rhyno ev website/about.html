@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Rhyno EV</title>
+    <style>
+        /* CSS styles go here */
+        body {
+            font-family: 'Lato', 'Poppins', 'Calibri', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FAFAFA;
+            color: #202020;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .founder-message {
+            background-color: #F8F8F8;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .founder-message p {
+            font-style: italic;
+        }
+        .product-highlights {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .product-highlight {
+            width: 30%;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #CCCCCC;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .team-members {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            width: 30%;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #CCCCCC;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            text-align: center;
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+        .contact-info a {
+            color: #009688;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .product-highlight, .team-member {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="company-overview">
+            <h1>About Rhyno EV</h1>
+            <p>Established in 2019 by an automotive engineer with a vision for sustainable and robust mobility solutions, Rhyno EV is not just a company; it's a collective effort of a dynamic team of young individuals passionately driving innovation in the electric vehicle industry. We believe in engineering solutions that solve problems. With our first product, we've taken a bold step to create something more than just a vehicle; it's a unique experience of elegance, comfort, and style, addressing the pitfalls of conventional electric scooters. Our design prioritizes safety, eliminating concerns of fires and ensuring a longer battery lifespan with our battery technology. Perfectly suited for fleet operators, especially in tourist-centric locations like Goa, our rugged yet aesthetically appealing scooters are engineered for longevity and reliability. Join us as we pioneer a new era in sustainable and dependable electric transportation.</p>
+        </section>
+        
+        <section class="founder-message">
+            <h2>Founder's Message</h2>
+            <p>"At Rhyno EV, we are committed to revolutionizing the electric vehicle industry by offering sustainable and dependable transportation solutions. Our focus on innovation, safety, and reliability drives us forward in creating products that not only meet but exceed the expectations of our customers."</p>
+        </section>
+        
+        <section class="product-highlights">
+            <div class="product-highlight">
+                <h2>Unique Experience</h2>
+                <p>Our products offer a unique blend of elegance, comfort, and style, providing customers with an unparalleled experience.</p>
+            </div>
+            <div class="product-highlight">
+                <h2>Safety First</h2>
+                <p>We prioritize safety in our designs, ensuring that our scooters are free from concerns of fires and are built to last.</p>
+            </div>
+            <div class="product-highlight">
+                <h2>Longevity & Reliability</h2>
+                <p>Engineered for longevity and reliability, our scooters are perfectly suited for fleet operators and tourist-centric locations.</p>
+            </div>
+        </section>
+        
+        <section class="team">
+            <h2>Meet Our Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="data:image/jpeg;base64,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" alt="CEO &Founder">
+                    <h3>Vishal Dhamecha </h3>
+                    <p>Founder & CEO </p>
+                </div>
+               
+                
