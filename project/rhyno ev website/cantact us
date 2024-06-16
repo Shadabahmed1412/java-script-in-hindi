@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-info p {
+            color: #666;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .contact-info p strong {
+            color: #333;
+        }
+
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 10px;
+            }
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="contact-info">
+            <p><strong>Mail:</strong><br><a href="mailto:info@rhyno.in">info@rhyno.in</a></p>
+            <p><strong>Mobile:</strong><br><a href="tel:+919023987528">+91-9023987528</a></p>
+            <p><strong>Location:</strong><br>Rhyno Wheels Private Limited,<br>Near UG hostel gate #2, Behind PDEU,<br>Raisan, Gandhinagar, Gujarat, India.</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 RHYNO EV
+    </footer>
+</body>
+</html>
+
+      
