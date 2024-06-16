@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhyno SE03 Max</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .product-section {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+            height: 100vh;
+            align-items: center;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative; /* Added for positioning arrows */
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .color-buttons {
+            margin: 10px 0;
+        }
+
+        .color-button {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: none;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .color-button.red { background-color: red; }
+        .color-button.yellow { background-color: yellow; }
+        .color-button.black { background-color: black; }
+
+        .product-card h3 {
+            margin: 15px 0 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .product-card p {
+            color: #666;
+            font-size: 1em;
+        }
+
+        .buy-now-button {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #666;
+            font-size: 1.5em;
+            background: none;
+            border: none;
+            outline: none;
+            padding: 5px;
+        }
+
+        .arrow.left {
+            left: 10px;
+        }
+
+        .arrow.right {
+            right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .product-card {
+                margin: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-card {
+                margin: 10px;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="product-section">
+        <button class="arrow left" onclick="prevImage()">&#10094;</button>
+        <div class="product-card" id="se03-max">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5iPRy46Mai39O-69Y2YLT7xQ9inSGXyUgpA&s" alt="Rhyno SE03 Max" id="product-img">
+            <div class="color-buttons">
+                <button class="color-button red"></button>
+                <button class="color-button yellow"></button>
+                <button class="color-button black"></button>
+            </div>
+            <h3>Rhyno SE03 Max</h3>
+            <p>Advanced features for professionals.</p><p>Detailed information about Rhyno SE03 Lite</p>
+            <table>
+                <tr>
+                    <td>Specification</td>
+                    <td>Rhyno SE03 Max</td>
+                </tr>
+                <tr>
+                    <td>Battery</td>
+                    <td>1.8Kwh</td>
+                </tr>
+                <tr>
+                    <td>Battery features</td>
+                    <td>LFP with 1500 cycles, Active Balancing, Waterproof (IP67)</td>
+                </tr>
+                <tr>
+                    <td>Battery warranty</td>
+                    <td>3 years</td> 
+                </tr>
+                <tr>
+                    <td>Charging time</td>
+                    <td>4 hours (12A)</td>
+                </tr>
+                <tr>
+                    <td>Motor</td>
+                    <td>2000W</td>
+                </tr>
+                <tr>
+                    <td>Max speed</td>
+                    <td>55 km/h</td>
+                </tr>
+                <tr>
+                    <td>Warranty on electronics</td>
+                    <td>1 year</td>
+                </tr>
+                <tr>
+                    <td>Max range (@30km/h)</td>
+                    <td>100 km</td>
+                </tr>
+                <tr>
+                    <td>Max range (@45km/h)</td>
+                    <td>100 km</td>
+                </tr>
+                <tr>
+                    <td>Max range (@full speed)</td>
+                    <td>80 km</td>
+                </tr>
+                <tr>
+                    <td>Other key benefits</td>
+                    <td>Fire-safe Battery, Range prediction, Comfortable ride, Stable and safe</td>
+                </tr>
+            </table>
+            <button class="buy-now-button">Buy Now</button>
+        </div>
+        <button class="arrow right" onclick="nextImage()">&#10095;</button>
+    </section>
+
+    <script>
+        const images = [
+            "https://rhyno.in/wp-content/uploads/elementor/thumbs/rhyno-final.4-e1650890245686-pnvvnuq5mv51vr5bxy4yg1o373eqsosw8bnjuyuhxc.png",
+            "https://rhyno.in/wp-content/uploads/elementor/thumbs/rhyno-final.85-min-e1650899511409-pnw2dseopqby6jq17iy17zt7jexu039q5skoow4ke8.png",
+            "https://iic.pdeu.ac.in/wp-content/uploads/2023/03/golden.92.png"
+        ];
+
+        let currentImageIndex = 0;
+        const productImg = document.getElementById("product-img");
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            productImg.src = images[currentImageIndex];
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            productImg.src = images[currentImageIndex];
+        }
+    </script>
+</body>
+</html>
