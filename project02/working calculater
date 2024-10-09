@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculater</title>
+</head>
+<body>
+    <div>
+        <input type="text" id = "result">
+    </div>
+    <div class="contaner">
+        <div class = "row">
+            <button class="button">AC</button>
+            <button class="button">%</button>
+            <button class="button">/</button>
+        </div>
+        <div class = "row">
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button">*</button>
+        </div>
+        <div class = "row">
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button">-</button>
+        </div>
+        <div class = "row">
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button">+</button>
+        </div>
+        <div class = "row">
+            <button id="button">.</button>
+            <button class="button">=</button>
+            <button class="button">delete</button>
+        </div>
+
+    </div>
+    <script>
+       let  String = "";
+       let buttons = document.querySelectorAll('.button');
+        Array.from(buttons).forEach((button)=>{
+            button.addEventListener('click',(e)=>{
+                if(e.target.innerHTML == '='){
+                    String= eval(String)
+                    document.querySelector('input').value =String;
+                }
+                else if (e.target.innerHTML == "AC"){
+                    String = ""
+                    document.querySelector('input').value=String; 
+                }
+                 
+                else{
+            console.log(e.target)
+             String=String+e.target.innerHTML;
+            document.querySelector('input').value =String;
+            
+        }
+    })
+        })
+    </script>
+</body>
+</html>
